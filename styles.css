@@ -1,5 +1,24 @@
-body {
-    background: #000;
-    color: #fff;
-    font-family: "Fraunces", serif;
+:root {
+    --clr-primary: hsl(158, 36%, 37%);
+    --clr-secondary: hsl(212, 21%, 14%);
+    --clr-grey: hsl(228, 12%, 48%);
+    --clr-cream: hsl(30, 38%, 92%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ff-accent: "Fraunces", serif;
+    --ff-base: "Montserrat", serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
