@@ -1,5 +1,6 @@
 :root {
     --clr-primary: hsl(158, 36%, 37%);
+    --clr-primary-dark: hsl(158, 42%, 18%);
     --clr-secondary: hsl(212, 21%, 14%);
     --clr-grey: hsl(228, 12%, 48%);
     --clr-cream: hsl(30, 38%, 92%);
@@ -11,6 +12,8 @@
     --fw-regular: 500;
     --fw-bold: 700;
 }
+
+
 /* CSS Reset */
 *,
 *::before,
@@ -18,7 +21,95 @@
     box-sizing: border-box;
 }
 
-img {
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+img, picture, svg {
     max-width: 100%;
     display: block;
+    border-radius: 8px 8px 0px 0px;
+}
+
+input, 
+button {
+    font: inherit;
+}
+
+
+/* Global Style */
+
+body {
+    font-family: var(--ff-base);
+    font-size: 0.875rem;
+    font-weight: var(--fw-regular);
+    background: var(--clr-cream);
+    color: var(--clr-grey);
+    display: grid;
+    place-content: center;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    background: var(--clr-white);
+    border-radius: 8px;
+}
+
+.product-content {
+    padding: 1.5rem;
+}
+
+.product-category {
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin-bottom: .7rem;
+}
+
+.product-title {
+    font-family: var(--ff-accent);
+    font-size: 2rem;
+    color: var(--clr-secondary);
+    line-height: 100%;
+    max-width: 25ch;
+    margin-bottom: 1rem;
+}
+
+P {
+    margin-bottom: 1.3rem;
+    max-width: 45ch;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-discunt-price {
+    font-family: var(--ff-accent);
+    font-size: 2rem;
+    color: var(--clr-primary);
+}
+
+.product-original-price {
+    text-decoration: line-through;
+}
+
+.button {
+    width: 100%;
+    padding: .7rem;
+    background: var(--clr-primary);
+    border: none;
+    border-radius: 5px;
+    color: var(--clr-white);
+}
+
+.button:hover {
+    background-color: var(--clr-primary-dark);
 }
